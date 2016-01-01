@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+#editor-textarea{
+    border-color: #D9D9D9;
+    background-color: #D9D9D9;
+}
+
+#tools-bar{
+    border-color: #D9D9D9;
+    background-color: #D9D9D9;
+}

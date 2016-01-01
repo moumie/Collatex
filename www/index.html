@@ -11,6 +11,7 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -28,6 +29,32 @@
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
       <ion-content>
+         
+           
+        <div class="row">
+            
+            <div class="col col-75" id="tools-bar">TOOLS HERE</div>
+            <div class="col">
+                
+              <a onclick="TogetherJS(this); return false;">
+              <img src="https://togetherjs.com/images/start-togetherjs-blue.png" style="width: 135px" /></a>
+
+            </div>
+        </div>   
+        
+        <div class="row">
+            <div class="col">
+                
+        <textarea name="editor" id="editor-textarea">
+
+        </textarea> 
+                
+            </div>
+        </div> 
+       <div class="bar bar-footer bar-balanced">
+          <div class="title">Footer</div>
+       </div>   
+       </div>   
       </ion-content>
     </ion-pane>
   </body>
