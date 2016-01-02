@@ -11,6 +11,9 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script><!--include Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+
     <script src="https://togetherjs.com/togetherjs-min.js"></script>
 
     <!-- ionic/angularjs js -->
@@ -21,6 +24,8 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/controllers.js"></script>
   </head>
   <body ng-app="starter">
 
@@ -29,7 +34,7 @@
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
       <ion-content>
-         
+	<div ng-controller="EditorCtrl">
            
         <div class="row">
             
@@ -45,12 +50,27 @@
         <div class="row">
             <div class="col">
                 
-        <textarea name="editor" id="editor-textarea">
+            <textarea name="editor" id="editor-textarea" ng-model="EditContent">
 
-        </textarea> 
+            </textarea> 
                 
             </div>
         </div> 
+            
+        <div class="row">
+            <div class="col">
+                
+            <textarea name="editor" id="editor-html" >
+
+            </textarea> 
+                
+            </div>
+        </div>     
+         <button class="button icon-left button-stable" ng-click="showContent()">Content</button>
+         <button class="button icon-right button-stable" ng-click="openPDF()">PDF</button>
+
+         <a href="http://localhost/collatexserver/api/down.php?file_content={{pdfFile}}"  target="_blank"> DOWNLOAD  {{pdfFile}}     
+         </a>
        <div class="bar bar-footer bar-balanced">
           <div class="title">Footer</div>
        </div>   
