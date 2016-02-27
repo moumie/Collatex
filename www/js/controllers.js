@@ -74,4 +74,5 @@ angular.module('starter')
     }).then(onDownloadComplete, onDownloadFailed);
 
    }
+   
 })
